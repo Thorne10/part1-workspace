@@ -46,10 +46,23 @@ public class Television {
     }
 
     public void setBrand (String brand){
-      this.brand = brand;
+
+    switch (brand) {
+      case ("Samsung"):
+        break;
+        case ("Sony"):
+          break;
+        case ("LG"):
+          break;
+
+      default:
+        System.out.printf("% is invalid; only Sasmung, LG, and Sony are allowed.%n");
+
     }
 
-    public int getVolume () {
+      }
+
+    public int getVolume(int i) {
       return volume;
     }
 
@@ -67,7 +80,10 @@ public class Television {
     }
 
     public String toString () {
+
       return "Television: brand = " + brand + ",  volume=" + volume;
 
     }
-  }
+
+
+
