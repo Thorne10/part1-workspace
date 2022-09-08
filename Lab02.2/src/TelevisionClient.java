@@ -5,6 +5,7 @@ public class TelevisionClient {
     tv1.setBrand("Samsung");
     tv1.setVolume(125);
 
+
     Television tv2 = new Television("sony",50);
 
 
@@ -30,6 +31,8 @@ public class TelevisionClient {
 
     System.out.println(tv3);
     System.out.printf("%d television instances created%n", Television.getInstanceCount());
+
+
 
 
  }

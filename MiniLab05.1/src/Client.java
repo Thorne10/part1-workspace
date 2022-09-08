@@ -8,10 +8,10 @@
 
 class Client {
 
-    // you can run each of these independently, by uncommenting the one you want
+
     public static void main(String[] args) {
-        // passByValue();
-        // passByReference();
+
+
     }
 
     private static void passByValue() {
@@ -21,9 +21,9 @@ class Client {
         // create Instructor and tell it to double my value
         Instructor instructor = new Instructor();
         instructor.doubleIt(x);
+        double it = 4.0;
+        }
 
-        System.out.println("Client: after the call, x is " + x);
-    }
 
     private static void passByReference() {
         Marker m1 = new Marker("red");
@@ -32,6 +32,13 @@ class Client {
         // create Instructor and tell it to write on board, with the Marker I pass in
         Instructor instructor = new Instructor();
         instructor.writeOnBoard(m1, "pass by reference");
+
+        class Instructor {
+            public void writeOnBoard(Marker marker, String message) {
+                marker.setColor("blue");
+            }
+
+        }
 
         System.out.println("Client: after the call, the marker is " + m1.getColor());
     }

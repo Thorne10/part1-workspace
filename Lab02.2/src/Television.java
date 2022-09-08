@@ -7,11 +7,14 @@ public class Television {
   private static int instanceCount = 0;
   private String brand;
   private int volume;
+  private DisplayType display = DisplayType.LED;
+
 
   public Television() {
     instanceCount++;
 
   }
+
 
   public Television(String brand) {
     this();
@@ -23,6 +26,12 @@ public class Television {
 
     this(brand);
     setVolume(volume);
+  }
+
+  public Television(String brand,  int volume, DisplayType display) {
+    this(brand, volume);
+    setDisplay(display);
+
   }
 
   public void turnOn() {
@@ -56,7 +65,7 @@ public class Television {
         break;
 
       default:
-        System.out.printf("%s is invalid; only Sasmung, LG, and Sony are allowed.%n", brand);
+        System.out.printf("%s is invalid; only Samsmung, LG, and Sony are allowed.%n", brand);
 
     }
 
@@ -74,6 +83,15 @@ public class Television {
       this.volume = volume;
     }
 
+
+  }
+
+  public DisplayType getDisplay() {
+    return display;
+  }
+
+  public void setDisplay(DisplayType display) {
+    this.display = display;
   }
 
   private boolean verifyInternetConnection() {
@@ -82,7 +100,10 @@ public class Television {
 
   public String toString() {
 
-    return "Television: brand = " + brand + ",  volume=" + volume;
+    return "Television: brand = " + brand + ",  volume= " + volume + ", displayType = " + display;
+
+
+
 
   }
 
