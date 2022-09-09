@@ -10,6 +10,7 @@ class Client {
 
 
     public static void main(String[] args) {
+        // passByValue();
 
 
     }
@@ -18,7 +19,7 @@ class Client {
         int x = 4;
         System.out.println("Client: before the call, x is " + x);
 
-        // create Instructor and tell it to double my value
+
         Instructor instructor = new Instructor();
         instructor.doubleIt(x);
         double it = 4.0;
