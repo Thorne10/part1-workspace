@@ -15,9 +15,10 @@ class TelevisionClient {
   
     public static void main(String[] args) {
         Television tv = new Television("Samsung", 65, DisplayType.LED);
-        System.out.println(tv);
+        System.out.println("HBO");
         
         // TODO: change the channel
+        tv.changeChannel("HBO");
         
         System.out.println(tv);
     }
