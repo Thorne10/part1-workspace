@@ -1,3 +1,5 @@
+package com.entertainment.client;
+
 public class TelevisionClient {
 
   public static void main(String[] args) {
