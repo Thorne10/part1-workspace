@@ -6,14 +6,15 @@
  * Copyright LearningPatterns Inc.
  */
 
+import java.net.ProxySelector;
 import java.util.*;
 import java.time.*;
 
 class ConcertTimeTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args, ProxySelector ZoneID) {
         listAvailableZoneIds();
-        // testLiveConcert();
+        testLiveConcert(ZoneID);
     }
 
     /*
@@ -36,7 +37,12 @@ class ConcertTimeTest {
      *
      * RESULT: 
      */
-    public static void testLiveConcert() {
+    public static void testLiveConcert(ProxySelector ZoneID) {
+        ZonedDateTime Ontario = ZonedDateTime.of(
+        LocalDateTime.of(2020, 6, 18, 7, 0),
+        ZoneId.of("Canada/Ontario"));
+
+        ZonedDateTime Australia = Ontario.withZoneSameInstant(ZoneID.of(Australia));
         // TODO
     }
 }

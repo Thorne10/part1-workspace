@@ -77,10 +77,17 @@ class DateTimeTest {
     //public static void testFormat() {
     LocalDate hastings = LocalDate.of(1066, 10, 14);
 
+      System.out.println(10/14/1066);
+    }
+
+    }
+
+
     // TODO: 10/14/1066
 
     // TODO: 14-10-1066
 
     // OPTIONAL: October 14, 1066
-  }
-}
+
+
+
