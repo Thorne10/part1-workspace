@@ -21,13 +21,19 @@ public class SalariedEmployee extends Employee {
   private void setSalary(double salary) {
     this.salary = salary;
   }
+  public void pay() {
+    System.out.printf("%s is paid a salary of %,.2f%n", getName(),getSalary());
+  }
 
   public double getSalary() {
     return salary;
   }
 
+
+
   public String toString() {
-    return String.format("%s, salary=%.2f", super.toString(), salary);
+    return super.toString() +", salary=" + getSalary();
+//    return String.format("%s, salary=%.2f", super.toString(), getsalary);
   }
 
 
