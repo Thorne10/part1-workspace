@@ -38,11 +38,10 @@ class ConcertTimeTest {
      * RESULT: 
      */
     public static void testLiveConcert(ProxySelector ZoneID) {
-        ZonedDateTime Ontario = ZonedDateTime.of(
-        LocalDateTime.of(2020, 6, 18, 7, 0),
-        ZoneId.of("Canada/Ontario"));
-
-        ZonedDateTime Australia = Ontario.withZoneSameInstant(ZoneID.of(Australia));
+        ZonedDateTime Toronto = ZoneID.of("America/Toroto");
+        ZoneId perth = ZoneID.of("Australia/Perth");
+        ZonedDateTime concertInToronto = ZonedDateTime.of(LocalDate.of(2020, 06, 18), LocalTime.of(19,0 ),
+        ZonedDateTime  concertInToronto.withZoneSameInstant ZoneId("America/Toronto");
         // TODO
     }
 }
