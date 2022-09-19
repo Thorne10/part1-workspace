@@ -66,7 +66,7 @@ public class PoemClient {
     private static void writePoem() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("haiku.txt"))) {
             writer.println("I think I get it");
-            writer.println("Don't want to celebrate too soon");
+            writer.println("Don't want to celebrate it too soon");
             writer.println("I'm going to cheer yay");
 
         } catch (IOException e) {
